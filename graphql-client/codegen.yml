@@ -1,7 +1,0 @@
-schema: http://localhost:9999/graphql # URL to your GraphQL schema
-documents: src/**/*.graphql # File paths or patterns for your GraphQL query/mutation files
-generates:
-  src/gql/generated/types.ts: # Output file for generated types
-    plugins:
-      - typescript
-      - typescript-operations

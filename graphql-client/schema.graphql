@@ -1,0 +1,26 @@
+schema {
+  query: RootQueryType
+}
+
+"""Exposes a URL that specifies the behavior of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behavior of this scalar."""
+  url: String!
+) on SCALAR
+
+type RootQueryType {
+  user(id: Int): User
+  users: [User]
+  usersByFirstName(first_name: String): [User]
+  usersByLastName(last_name: String): [User]
+}
+
+type User {
+  id: Int
+  first_name: String!
+  last_name: String!
+  email: String
+  gender: String
+  ip_address: String
+}
+

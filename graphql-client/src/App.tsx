@@ -2,12 +2,13 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import UserProfile from './components/UserProfile';
-import Home from './components/Home';
+import  Home from './components/Home';
 
 // Initialize Apollo Client
-const client = new ApolloClient({
-  uri: 'http://localhost:9999/graphql', // Your GraphQL server endpoint
-  cache: new InMemoryCache()
+export const client = new ApolloClient({
+  uri: 'http://localhost:9999/graphql',
+  cache: new InMemoryCache(),
+  connectToDevTools: true,
 });
 
 const App: React.FC = () => {
@@ -17,8 +18,8 @@ const App: React.FC = () => {
         <div>
           <h1>GraphQL React App</h1>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/user/:userId" component={UserProfile} />
+            <Route exact path="/" render={() => <Home />} />
+            <Route path="/user/:userId" render={() => <UserProfile />} />
           </Switch>
         </div>
       </Router>

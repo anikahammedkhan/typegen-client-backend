@@ -12,7 +12,6 @@ const GET_USER = gql`
       last_name
       email
       gender
-      ip_address
     }
   }
 `;
