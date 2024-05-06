@@ -1,0 +1,10 @@
+# src/schema.graphql
+
+type User {
+  id: ID!
+  first_name: String!
+}
+
+type Query {
+  user: User!
+}
