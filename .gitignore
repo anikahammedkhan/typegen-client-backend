@@ -1,2 +1,2 @@
-./graphql-client/node_modules
-./Backend/node_modules
+graphql-client/node_modules
+Backend/node_modules
