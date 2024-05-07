@@ -42,6 +42,5 @@ const UserProfile: React.FC = () => {
   );
 }
 
-// sdfhkjohoi
 
 export default UserProfile;
