@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
-import { GetUserByIdQuery } from '../gql/generated/types'; 
+import { GetUserByIdQuery } from '../gql/generated/types';
 
 // Define your GraphQL query
 const GET_USER = gql`

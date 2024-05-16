@@ -5,11 +5,9 @@ import { GetUsersQuery } from '../gql/generated/types'; // Import generated type
 
 // Define your GraphQL query to fetch all users
 const GET_USERS = gql`
-  query GetUsers {
+  query GetUserss {
     users {
       id
-      first_name
-      last_name
     }
   }
 `;
